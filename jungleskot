@@ -487,6 +487,7 @@ function Lib:Init(Settings)
 			local a = Settings.Verify(CurrentKeyInput)
 			if typeof(a)=="boolean" then
 				_5432Key543Entered7654= a
+a=true
 				if Settings.Debug == true then
 					if a then
 						print("✅[Key System] Key is valid"..(" (%s)"):format(CurrentKeyInput))
@@ -564,7 +565,7 @@ function Lib:Init(Settings)
 
 	-- Handles key validation and UI lifecycle
 	if _5432Key543Entered7654 then
-		return true
+		print("ffeed")
 	else
 		TS:Create(Background_1,TweenInfo.new(0.33),{GroupTransparency=0}):Play()
 		repeat wait() until _5432Key543Entered7654 == true or Closed == true
